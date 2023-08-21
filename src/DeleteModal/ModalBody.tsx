@@ -1,5 +1,11 @@
 import alertIcon from '../assets/alert.svg';
-import { CancelButton, DeleteButton, Description, ModalBodyContainer, Title } from './Styles';
+import {
+  CancelButton,
+  DeleteButton,
+  Description,
+  ModalBodyContainer,
+  Title,
+} from './Styles';
 
 interface ModalBodyProps {
   onClose: () => void;
