@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../constants/colorConstants';
+import { colors } from '../shared/constants/colorConstants';
 
 export const ModalBodyContainer = styled.div`
   background-color: ${colors.gray0};
@@ -29,12 +29,16 @@ export const Description = styled.p`
   font-weight: 400;
   font-family: 'OpenSans-Regular';
 `;
-const ModalButton = styled.button`
+
+export const ButtonsContainer = styled.div`
   margin-top: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+`;
+
+const ModalButton = styled.button`
   flex-wrap: wrap;
   transition: all 0.3s;
   padding: 10px 18px;
@@ -85,6 +89,7 @@ background-color:  ${colors.red110};
 &:focus {
     background-color: ${colors.red110};
     box-shadow: 0px 0px 0px 4px ${colors.red10};, 0px 1px 2px 0px ${colors.shadow0};
+}
 
 &:disabled {
     background-color: ${colors.red40};

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../constants/colorConstants';
+import { colors } from '../shared/constants/colorConstants';
 
 export const ModalContainer = styled.div`
   position: relative;
@@ -16,6 +16,6 @@ export const Overlay = styled.div`
   right: 0;
   bottom: 0;
   background-color: ${colors.black0};
-  z-index: 100;
+  z-index: 99;
   backdrop-filter: blur(4px);
 `;

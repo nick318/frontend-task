@@ -1,18 +1,13 @@
 import { Fragment } from 'react';
-import { ModalBody } from '../DeleteModal/ModalBody.tsx';
-import text from '../assets/modalText.json';
-import { ModalWrapper } from '../Modal/ModalOverlay.tsx';
+import { Modal } from '../Modal/Modal.tsx';
 
 export const App = () => {
+  const button = (handleOpen: () => void) => (
+    <button onClick={handleOpen}>Open Modal</button>
+  );
   return (
     <Fragment>
-      <button>Open modal</button>
-      <ModalBody
-        onClose={() => null}
-        title={text.main}
-        description={text.description}
-      />
-      <ModalWrapper open={true} onClose={() => null} />
+      <Modal renderContent={button} />
     </Fragment>
   );
 };

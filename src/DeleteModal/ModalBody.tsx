@@ -1,28 +1,37 @@
-import alertIcon from '../assets/alert.svg';
+import alertIcon from '../shared/assets/alert.svg';
 import {
   CancelButton,
   DeleteButton,
   Description,
   ModalBodyContainer,
   Title,
+  ButtonsContainer,
 } from './Styles';
 
 interface ModalBodyProps {
   onClose: () => void;
+  isTimeout: boolean;
   title?: string;
   description?: string;
 }
 
-export const ModalBody = ({ onClose, title, description }: ModalBodyProps) => {
+export const ModalBody = ({
+  onClose,
+  title,
+  description,
+  isTimeout,
+}: ModalBodyProps) => {
   return (
     <ModalBodyContainer>
       <img src={alertIcon} alt="AlertIcon" />
       <Title>{title}</Title>
       <Description>{description}</Description>
-      <div>
+      <ButtonsContainer>
         <CancelButton onClick={onClose}>Cancel</CancelButton>
-        <DeleteButton onClick={onClose}>Delete</DeleteButton>
-      </div>
+        <DeleteButton onClick={onClose} disabled={isTimeout}>
+          Delete
+        </DeleteButton>
+      </ButtonsContainer>
     </ModalBodyContainer>
   );
 };
