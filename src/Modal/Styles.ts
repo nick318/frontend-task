@@ -16,6 +16,6 @@ export const Overlay = styled.div`
   right: 0;
   bottom: 0;
   background-color: ${colors.black0};
-  z-index: 99;
+  z-index: 100;
   backdrop-filter: blur(4px);
 `;
