@@ -1,4 +1,5 @@
 import alertIcon from '../assets/alert.svg';
+import { CancelButton, DeleteButton, Description, ModalBodyContainer, Title } from './Styles';
 
 interface ModalBodyProps {
   onClose: () => void;
@@ -8,20 +9,16 @@ interface ModalBodyProps {
 
 export const ModalBody = ({ onClose, title, description }: ModalBodyProps) => {
   return (
-    <div>
+    <ModalBodyContainer>
       <img src={alertIcon} alt="AlertIcon" />
-      <p>{title}</p>
-      <p>{description}</p>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
       <div>
-        <button onClick={onClose}>
-          Cancel
-        </button>
-        <button onClick={onClose}>
-          Delete
-        </button>
+        <CancelButton onClick={onClose}>Cancel</CancelButton>
+        <DeleteButton onClick={onClose}>Delete</DeleteButton>
       </div>
-    </div>
+    </ModalBodyContainer>
   );
 };
 
-export default ModalBody
+export default ModalBody;
