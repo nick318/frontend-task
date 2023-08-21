@@ -1,6 +1,6 @@
 import { useCallback, useState, Fragment, useRef } from 'react';
 import modalText from '../shared/assets/modalText.json';
-import ModalBody from '../DeleteModal/ModalBody';
+import ModalBody from './ModalBody';
 import { Overlay, ModalContainer } from './Styles';
 import { createPortal } from 'react-dom';
 import useOnEscapeKeyDown from '../shared/hooks/onEscKeyDown';

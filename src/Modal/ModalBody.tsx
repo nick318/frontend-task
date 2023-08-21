@@ -6,7 +6,7 @@ import {
   ModalBodyContainer,
   Title,
   ButtonsContainer,
-} from './Styles';
+} from '../DeleteModal/Styles';
 
 interface ModalBodyProps {
   onClose: () => void;
